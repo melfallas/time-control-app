@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="/assets/img/A-64.png" width="30" height="30" alt="" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" routerLinkActive="active" >
+                <a class="nav-link"  [routerLink]="['/home']" >Home</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" >
+                <a class="nav-link" [routerLink]="['/knowledge-area']">Áreas</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" >
+                <a class="nav-link" [routerLink]="['/project-phase']">Fases</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" >
+                <a class="nav-link" [routerLink]="['/resource-type']">RecursoT</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" >
+                <a class="nav-link" [routerLink]="['/resource']">Recurso</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" >
+                <a class="nav-link" [routerLink]="['about']">Acerca</a>
+            </li>
+        </ul>
+        <!--
+        <div class="form-inline my-2 my-lg-0">
+            <input id="inputBusqueda" class="form-control mr-sm-2" type="text" placeholder="Digite su búsqueda..." aria-label="Buscar Héroe"
+            (keyup.enter)="searchCoincidenceHeroes(inputBusqueda.value)" #inputBusqueda />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button"
+            (click)="searchCoincidenceHeroes(inputBusqueda.value)">
+                Buscar
+            </button>
+        </div>
+        -->
+    </div>
+</nav>
