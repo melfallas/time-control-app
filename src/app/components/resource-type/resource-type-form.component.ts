@@ -11,9 +11,10 @@ import { ResourceTypeService } from '../../services/resource-type.service';
 
 export class ResourceTypeFormComponent {
 
-    id : string;
-    resourceType : any;
-    mainForm : FormGroup;
+    private id : string;
+    private resourceType : any;
+    private mainForm : FormGroup;
+    // Atributos autogenerados para listados de catálogos
 
     constructor(
         private _resourceTypeService : ResourceTypeService,
@@ -45,7 +46,13 @@ export class ResourceTypeFormComponent {
             ,Validators.maxLength(50)
         ]),
     });
+    // Llamados autogenerados a carga de catálogos
 }
+
+public getMainForm() : FormGroup {
+    return this.mainForm;
+}
+
 
 public saveChanges() {
     if(this.id == 'new') {
