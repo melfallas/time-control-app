@@ -11,9 +11,9 @@ styles: []
 
 export class ProjectPhaseFormComponent {
 
-private id : string;
-private projectPhase : any;
-private mainForm : FormGroup;
+id : string;
+projectPhase : any;
+mainForm : FormGroup;
 
 constructor(
 private _projectPhaseService : ProjectPhaseService,

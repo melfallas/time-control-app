@@ -9,7 +9,7 @@
 <hr>
 <form [formGroup]="mainForm" (ngSubmit)="saveChanges()" >
 
-<div class="form-group row" [ngClass]="{ 'has-danger' : !mainForm.get('code').valid && (mainForm.get('code').ng-dirty || mainForm.get('code').touched) }" >
+<div class="form-group row" >
 <label class="col-2 col-form-label">code</label>
 <div class="col-8">
 <input class="form-control"
@@ -21,7 +21,7 @@ formControlName="code"
 <div class="form-control-feedback" *ngIf="mainForm.get('code').errors?.maxlength && mainForm.get('code').touched" >El campo debe contener menos de 5 caracteres</div>
 </div>
 </div>
-<div class="form-group row" [ngClass]="{ 'has-danger' : !mainForm.get('displayName').valid && (mainForm.get('displayName').ng-dirty || mainForm.get('displayName').touched) }" >
+<div class="form-group row" >
 <label class="col-2 col-form-label">displayName</label>
 <div class="col-8">
 <input class="form-control"
@@ -33,7 +33,7 @@ formControlName="displayName"
 <div class="form-control-feedback" *ngIf="mainForm.get('displayName').errors?.maxlength && mainForm.get('displayName').touched" >El campo debe contener menos de 50 caracteres</div>
 </div>
 </div>
-<div class="form-group row" [ngClass]="{ 'has-danger' : !mainForm.get('description').valid && (mainForm.get('description').ng-dirty || mainForm.get('description').touched) }" >
+<div class="form-group row" >
 <label class="col-2 col-form-label">description</label>
 <div class="col-8">
 <input class="form-control"

@@ -9,7 +9,7 @@ styles: []
 
 export class KnowledgeAreaComponent {
 
-private knowledgeAreaList : any[] = [];
+knowledgeAreaList : any[] = [];
 
 constructor(private _pKnowledgeArea : KnowledgeAreaService) {
 this._pKnowledgeArea.getAll().subscribe(data => {

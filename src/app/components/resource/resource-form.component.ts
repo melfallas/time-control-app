@@ -12,11 +12,11 @@ styles: []
 
 export class ResourceFormComponent {
 
-private id : string;
-private resource : any;
-private mainForm : FormGroup;
+id : string;
+resource : any;
+mainForm : FormGroup;
 // Atributos autogenerados para listados de catálogos
-private resourceTypeList = [];
+resourceTypeList = [];
 
 constructor(
 private _resourceTypeService : ResourceTypeService,

@@ -9,7 +9,7 @@ import { ResourceTypeService } from "../../services/resource-type.service";
 
 export class ResourceTypeComponent {
 
-    private resourceTypeList : any[] = [];
+    resourceTypeList : any[] = [];
 
     constructor(private _pResourceType : ResourceTypeService) {
         this._pResourceType.getAll().subscribe(data => {

@@ -11,9 +11,9 @@ import { ResourceTypeService } from '../../services/resource-type.service';
 
 export class ResourceTypeFormComponent {
 
-    private id : string;
-    private resourceType : any;
-    private mainForm : FormGroup;
+    id : string;
+    resourceType : any;
+    mainForm : FormGroup;
 
     constructor(
         private _resourceTypeService : ResourceTypeService,

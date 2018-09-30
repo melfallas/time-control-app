@@ -9,7 +9,7 @@ styles: []
 
 export class ProjectPhaseComponent {
 
-private projectPhaseList : any[] = [];
+projectPhaseList : any[] = [];
 
 constructor(private _pProjectPhase : ProjectPhaseService) {
 this._pProjectPhase.getAll().subscribe(data => {

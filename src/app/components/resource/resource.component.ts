@@ -9,7 +9,7 @@ import { ResourceService } from "../../services/resource.service";
 
 export class ResourceComponent {
 
-    private resourceList : any[] = [];
+    resourceList : any[] = [];
 
     constructor(private _pResource : ResourceService) {
         this._pResource.getAll().subscribe(data => {
@@ -17,7 +17,7 @@ export class ResourceComponent {
             console.log(data);
         });
     }
-    
+
     public deleteResource(pId : string) {
         this._pResource.deleteResource(pId)
         .subscribe(result => {

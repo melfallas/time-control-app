@@ -11,9 +11,9 @@ styles: []
 
 export class KnowledgeAreaFormComponent {
 
-private id : string;
-private knowledgeArea : any;
-private mainForm : FormGroup;
+id : string;
+knowledgeArea : any;
+mainForm : FormGroup;
 
 constructor(
 private _knowledgeAreaService : KnowledgeAreaService,
