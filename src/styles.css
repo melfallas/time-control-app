@@ -3,6 +3,10 @@
   margin-bottom: 150px;
 }
 
+.form-control-invalid {
+    color: red;
+}
+
 .puntero{
   cursor: pointer;
 }

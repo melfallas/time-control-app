@@ -17,8 +17,8 @@ type="text"
 placeholder="code"
 formControlName="code"
 />
-<div class="form-control-feedback" *ngIf="getMainForm().get('code').errors?.required && getMainForm().get('code').touched" >Campo requerido</div>
-<div class="form-control-feedback" *ngIf="getMainForm().get('code').errors?.maxlength && getMainForm().get('code').touched" >El campo debe contener menos de 5 caracteres</div>
+<div class="form-control-invalid" *ngIf="getMainForm().get('code').errors?.required && getMainForm().get('code').touched" >Campo requerido</div>
+<div class="form-control-invalid" *ngIf="getMainForm().get('code').errors?.maxlength && getMainForm().get('code').touched" >El campo debe contener menos de 5 caracteres</div>
 </div>
 </div>
 <div class="form-group row" >
@@ -29,8 +29,8 @@ type="text"
 placeholder="displayName"
 formControlName="displayName"
 />
-<div class="form-control-feedback" *ngIf="getMainForm().get('displayName').errors?.required && getMainForm().get('displayName').touched" >Campo requerido</div>
-<div class="form-control-feedback" *ngIf="getMainForm().get('displayName').errors?.maxlength && getMainForm().get('displayName').touched" >El campo debe contener menos de 50 caracteres</div>
+<div class="form-control-invalid" *ngIf="getMainForm().get('displayName').errors?.required && getMainForm().get('displayName').touched" >Campo requerido</div>
+<div class="form-control-invalid" *ngIf="getMainForm().get('displayName').errors?.maxlength && getMainForm().get('displayName').touched" >El campo debe contener menos de 50 caracteres</div>
 </div>
 </div>
 <div class="form-group row" >
@@ -41,7 +41,7 @@ type="text"
 placeholder="description"
 formControlName="description"
 />
-<div class="form-control-feedback" *ngIf="getMainForm().get('description').errors?.maxlength && getMainForm().get('description').touched" >El campo debe contener menos de 50 caracteres</div>
+<div class="form-control-invalid" *ngIf="getMainForm().get('description').errors?.maxlength && getMainForm().get('description').touched" >El campo debe contener menos de 50 caracteres</div>
 </div>
 </div>
 <div class="form-group row">
