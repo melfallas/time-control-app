@@ -22,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of resourceTypeList; let i = index;" >
+                    <tr *ngFor="let item of getResourceTypeList(); let i = index;" >
                         <th scope="row">{{ i + 1 }}</th>
                         <td>{{ item.code }}</td>
                         <td>{{ item.displayName }}</td>

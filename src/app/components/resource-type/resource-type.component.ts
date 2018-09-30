@@ -9,13 +9,17 @@ import { ResourceTypeService } from "../../services/resource-type.service";
 
 export class ResourceTypeComponent {
 
-    resourceTypeList : any[] = [];
+    private resourceTypeList : any[] = [];
 
     constructor(private _pResourceType : ResourceTypeService) {
         this._pResourceType.getAll().subscribe(data => {
             this.resourceTypeList = data;
             console.log(data);
         });
+    }
+
+    public getResourceTypeList() {
+        return this.resourceTypeList;
     }
 
     public deleteResourceType(pId : string) {
