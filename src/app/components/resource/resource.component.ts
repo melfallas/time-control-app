@@ -9,13 +9,17 @@ import { ResourceService } from "../../services/resource.service";
 
 export class ResourceComponent {
 
-    resourceList : any[] = [];
+    private resourceList : any[] = [];
 
     constructor(private _pResource : ResourceService) {
         this._pResource.getAll().subscribe(data => {
             this.resourceList = data;
             console.log(data);
         });
+    }
+
+    public getResourceList() {
+        return this.resourceList;
     }
 
     public deleteResource(pId : string) {

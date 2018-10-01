@@ -7,7 +7,7 @@ import 'rxjs/Rx';
 })
 export class ResourceTypeService {
 
-    private serviceUrl : string = "http://localhost:5555/resourcetype/";
+    private serviceUrl : string = "https://time-control-app.herokuapp.com/";
 
     constructor(private _http : Http) { }
 
