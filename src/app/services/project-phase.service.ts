@@ -7,7 +7,7 @@ providedIn: 'root'
 })
 export class ProjectPhaseService {
 
-private serviceUrl : string = "http://localhost:5555/projectphase/";
+private serviceUrl : string = "https://time-control-app.herokuapp.com/projectphase/";
 
 constructor(private _http : Http) { }
 

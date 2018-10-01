@@ -9,13 +9,17 @@ styles: []
 
 export class ProjectPhaseComponent {
 
-projectPhaseList : any[] = [];
+private projectPhaseList : any[] = [];
 
 constructor(private _pProjectPhase : ProjectPhaseService) {
 this._pProjectPhase.getAll().subscribe(data => {
 this.projectPhaseList = data;
 console.log(data);
 });
+}
+
+public getProjectPhaseList() {
+return this.projectPhaseList;
 }
 
 public deleteProjectPhase(pId : string) {
