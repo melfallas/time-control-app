@@ -5,15 +5,16 @@ import { KnowledgeAreaService } from '../../services/knowledge-area.service';
 
 @Component({
 selector: 'app-knowledge-area-form',
-templateUrl: './knowledge-area.form.component.html',
+templateUrl: './knowledge-area-form.component.html',
 styles: []
 })
 
 export class KnowledgeAreaFormComponent {
 
-id : string;
-knowledgeArea : any;
-mainForm : FormGroup;
+private id : string;
+private knowledgeArea : any;
+private mainForm : FormGroup;
+// Atributos autogenerados para listados de catálogos
 
 constructor(
 private _knowledgeAreaService : KnowledgeAreaService,
@@ -45,7 +46,14 @@ Validators.required
 ,Validators.maxLength(50)
 ]),
 });
+// Llamados autogenerados a carga de catálogos
 }
+
+public getMainForm() : FormGroup {
+return this.mainForm;
+}
+
+
 
 public saveChanges() {
 if(this.id == 'new') {

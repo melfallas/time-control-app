@@ -7,8 +7,7 @@ import 'rxjs/Rx';
 })
 export class KnowledgeAreaService {
 
-    //private serviceUrl : string = "https://time-control-app.herokuapp.com/knowledgearea/";
-    private serviceUrl : string = "http://localhost:5555/knowledgearea/";
+    private serviceUrl : string = "https://time-control-app.herokuapp.com/knowledgearea/";
 
     constructor(private _http : Http) { }
 
@@ -35,11 +34,10 @@ export class KnowledgeAreaService {
         let headers = new Headers({
             'Content-Type' : 'application/json'
         });
-        console.log(body);
         return this._http.post(this.getRootURL(), body, {headers})
         .map(result => result.json());
     }
-
+    
     public updateKnowledgeArea(pKnowledgeAreaData, pId : string) {
         let body = JSON.stringify(pKnowledgeAreaData);
         let headers = new Headers({

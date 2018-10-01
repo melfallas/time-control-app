@@ -9,13 +9,17 @@ styles: []
 
 export class KnowledgeAreaComponent {
 
-knowledgeAreaList : any[] = [];
+private knowledgeAreaList : any[] = [];
 
 constructor(private _pKnowledgeArea : KnowledgeAreaService) {
 this._pKnowledgeArea.getAll().subscribe(data => {
 this.knowledgeAreaList = data;
 console.log(data);
 });
+}
+
+public getKnowledgeAreaList() {
+return this.knowledgeAreaList;
 }
 
 public deleteKnowledgeArea(pId : string) {
