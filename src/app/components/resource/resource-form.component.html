@@ -64,7 +64,7 @@
             placeholder="resourceType"
             formControlName="resourceType"
             >
-            <option *ngFor="let item of getResourceTypeList()" value="item.id">{{ item.displayName }}</option>
+            <option *ngFor="let item of getResourceTypeList()" [value]="item.id">{{ item.displayName }}</option>
         </select>
         <div class="form-control-feedback" *ngIf="getMainForm().get('resourceType').errors?.required && getMainForm().get('resourceType').touched" >Campo requerido</div>
         <div class="form-control-feedback" *ngIf="getMainForm().get('resourceType').errors?.maxlength && getMainForm().get('resourceType').touched" >El campo debe contener menos de 4 caracteres</div>

@@ -30,7 +30,8 @@ export class ResourceFormComponent {
             this._resourceService.getResource(this.id)
             .subscribe(item => {
                 this.resource = item.data;
-                delete item.data.id;
+                delete item.data.id;				// Borrar e id del objeto para ignorarlo en la carga del formulario
+                item.data.resourceType = item.data.resourceType.id;
                 console.log(item.data);
                 this.mainForm.setValue(item.data);
             });
