@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 // Importación de Componentes
 import { HomeComponent } from './components/home/home.component';
 import { KnowledgeAreaComponent } from './components/knowledge-area/knowledge-area.component';
-import { KnowledgeAreaFormComponent } from './components/knowledge-area/knowledge-area.form.component';
+import { KnowledgeAreaFormComponent } from './components/knowledge-area/knowledge-area-form.component';
 import { ProjectPhaseComponent } from './components/project-phase/project-phase.component';
 import { ProjectPhaseFormComponent } from './components/project-phase/project-phase-form.component';
 import { ResourceTypeComponent } from './components/resource-type/resource-type.component';

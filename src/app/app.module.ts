@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { KnowledgeAreaComponent } from './components/knowledge-area/knowledge-area.component';
-import { KnowledgeAreaFormComponent } from './components/knowledge-area/knowledge-area.form.component';
+import { KnowledgeAreaFormComponent } from './components/knowledge-area/knowledge-area-form.component';
 import { KnowledgeAreaService } from "./services/knowledge-area.service";
 import { ProjectPhaseComponent } from './components/project-phase/project-phase.component';
 import { ProjectPhaseFormComponent } from './components/project-phase/project-phase-form.component';
