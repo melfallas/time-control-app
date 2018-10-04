@@ -1,117 +1,117 @@
 <div class="row">
-<div class="col-md-10">
-<h4>Nuevo Elemento <small>Resource</small></h4>
-</div>
-<div class="col-md-2">
-<button [routerLink]="['/resource']" type="button" class="btn btn-outline-danger">Regresar</button>
-</div>
+    <div class="col-md-10">
+        <h4>Nuevo Elemento <small>Resource</small></h4>
+    </div>
+    <div class="col-md-2">
+        <button [routerLink]="['/resource']" type="button" class="btn btn-outline-danger">Regresar</button>
+    </div>
 </div>
 <hr>
 <form [formGroup]="getMainForm()" (ngSubmit)="saveChanges()" >
 
-<div class="form-group row" >
-<label class="col-2 col-form-label">code</label>
-<div class="col-8">
-<input class="form-control"
-type="text"
-placeholder="code"
-formControlName="code"
-/>
-<div class="form-control-feedback" *ngIf="getMainForm().get('code').errors?.required && getMainForm().get('code').touched" >Campo requerido</div>
-<div class="form-control-feedback" *ngIf="getMainForm().get('code').errors?.maxlength && getMainForm().get('code').touched" >El campo debe contener menos de 5 caracteres</div>
-</div>
-</div>
-<div class="form-group row" >
-<label class="col-2 col-form-label">displayName</label>
-<div class="col-8">
-<input class="form-control"
-type="text"
-placeholder="displayName"
-formControlName="displayName"
-/>
-<div class="form-control-feedback" *ngIf="getMainForm().get('displayName').errors?.required && getMainForm().get('displayName').touched" >Campo requerido</div>
-<div class="form-control-feedback" *ngIf="getMainForm().get('displayName').errors?.maxlength && getMainForm().get('displayName').touched" >El campo debe contener menos de 50 caracteres</div>
-</div>
-</div>
-<div class="form-group row" >
-<label class="col-2 col-form-label">description</label>
-<div class="col-8">
-<input class="form-control"
-type="text"
-placeholder="description"
-formControlName="description"
-/>
-<div class="form-control-feedback" *ngIf="getMainForm().get('description').errors?.maxlength && getMainForm().get('description').touched" >El campo debe contener menos de 50 caracteres</div>
-</div>
-</div>
-<div class="form-group row" >
-<label class="col-2 col-form-label">abbreviation</label>
-<div class="col-8">
-<input class="form-control"
-type="text"
-placeholder="abbreviation"
-formControlName="abbreviation"
-/>
-<div class="form-control-feedback" *ngIf="getMainForm().get('abbreviation').errors?.required && getMainForm().get('abbreviation').touched" >Campo requerido</div>
-<div class="form-control-feedback" *ngIf="getMainForm().get('abbreviation').errors?.maxlength && getMainForm().get('abbreviation').touched" >El campo debe contener menos de 5 caracteres</div>
-</div>
-</div>
-<div class="form-group row" >
-<label class="col-2 col-form-label">resourceType</label>
-<div class="col-8">
-<select class="form-control"
-name="resourceType"
-placeholder="resourceType"
-formControlName="resourceType"
->
-<option *ngFor="let item of getResourceTypeList()" value="item.id">{{ item.displayName }}</option>
-</select>
-<div class="form-control-feedback" *ngIf="getMainForm().get('resourceType').errors?.required && getMainForm().get('resourceType').touched" >Campo requerido</div>
-<div class="form-control-feedback" *ngIf="getMainForm().get('resourceType').errors?.maxlength && getMainForm().get('resourceType').touched" >El campo debe contener menos de 4 caracteres</div>
-</div>
-</div>
-<div class="form-group row" >
-<label class="col-2 col-form-label">hourCost</label>
-<div class="col-8">
-<input class="form-control"
-type="text"
-placeholder="hourCost"
-formControlName="hourCost"
-/>
-<div class="form-control-feedback" *ngIf="getMainForm().get('hourCost').errors?.required && getMainForm().get('hourCost').touched" >Campo requerido</div>
-<div class="form-control-feedback" *ngIf="getMainForm().get('hourCost').errors?.maxlength && getMainForm().get('hourCost').touched" >El campo debe contener menos de 9 caracteres</div>
-</div>
+    <div class="form-group row" >
+        <label class="col-2 col-form-label">code</label>
+        <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="code"
+            formControlName="code"
+            />
+            <div class="form-control-feedback" *ngIf="getMainForm().get('code').errors?.required && getMainForm().get('code').touched" >Campo requerido</div>
+            <div class="form-control-feedback" *ngIf="getMainForm().get('code').errors?.maxlength && getMainForm().get('code').touched" >El campo debe contener menos de 5 caracteres</div>
+        </div>
+    </div>
+    <div class="form-group row" >
+        <label class="col-2 col-form-label">displayName</label>
+        <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="displayName"
+            formControlName="displayName"
+            />
+            <div class="form-control-feedback" *ngIf="getMainForm().get('displayName').errors?.required && getMainForm().get('displayName').touched" >Campo requerido</div>
+            <div class="form-control-feedback" *ngIf="getMainForm().get('displayName').errors?.maxlength && getMainForm().get('displayName').touched" >El campo debe contener menos de 50 caracteres</div>
+        </div>
+    </div>
+    <div class="form-group row" >
+        <label class="col-2 col-form-label">description</label>
+        <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="description"
+            formControlName="description"
+            />
+            <div class="form-control-feedback" *ngIf="getMainForm().get('description').errors?.maxlength && getMainForm().get('description').touched" >El campo debe contener menos de 50 caracteres</div>
+        </div>
+    </div>
+    <div class="form-group row" >
+        <label class="col-2 col-form-label">abbreviation</label>
+        <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="abbreviation"
+            formControlName="abbreviation"
+            />
+            <div class="form-control-feedback" *ngIf="getMainForm().get('abbreviation').errors?.required && getMainForm().get('abbreviation').touched" >Campo requerido</div>
+            <div class="form-control-feedback" *ngIf="getMainForm().get('abbreviation').errors?.maxlength && getMainForm().get('abbreviation').touched" >El campo debe contener menos de 5 caracteres</div>
+        </div>
+    </div>
+    <div class="form-group row" >
+        <label class="col-2 col-form-label">resourceType</label>
+        <div class="col-8">
+            <select class="form-control"
+            name="resourceType"
+            placeholder="resourceType"
+            formControlName="resourceType"
+            >
+            <option *ngFor="let item of getResourceTypeList()" value="item.id">{{ item.displayName }}</option>
+        </select>
+        <div class="form-control-feedback" *ngIf="getMainForm().get('resourceType').errors?.required && getMainForm().get('resourceType').touched" >Campo requerido</div>
+        <div class="form-control-feedback" *ngIf="getMainForm().get('resourceType').errors?.maxlength && getMainForm().get('resourceType').touched" >El campo debe contener menos de 4 caracteres</div>
+    </div>
 </div>
 <div class="form-group row" >
-<label class="col-2 col-form-label">extraHourCost</label>
-<div class="col-8">
-<input class="form-control"
-type="text"
-placeholder="extraHourCost"
-formControlName="extraHourCost"
-/>
-<div class="form-control-feedback" *ngIf="getMainForm().get('extraHourCost').errors?.required && getMainForm().get('extraHourCost').touched" >Campo requerido</div>
-<div class="form-control-feedback" *ngIf="getMainForm().get('extraHourCost').errors?.maxlength && getMainForm().get('extraHourCost').touched" >El campo debe contener menos de 9 caracteres</div>
-</div>
+    <label class="col-2 col-form-label">hourCost</label>
+    <div class="col-8">
+        <input class="form-control"
+        type="text"
+        placeholder="hourCost"
+        formControlName="hourCost"
+        />
+        <div class="form-control-feedback" *ngIf="getMainForm().get('hourCost').errors?.required && getMainForm().get('hourCost').touched" >Campo requerido</div>
+        <div class="form-control-feedback" *ngIf="getMainForm().get('hourCost').errors?.maxlength && getMainForm().get('hourCost').touched" >El campo debe contener menos de 9 caracteres</div>
+    </div>
 </div>
 <div class="form-group row" >
-<label class="col-2 col-form-label">useCost</label>
-<div class="col-8">
-<input class="form-control"
-type="text"
-placeholder="useCost"
-formControlName="useCost"
-/>
-<div class="form-control-feedback" *ngIf="getMainForm().get('useCost').errors?.required && getMainForm().get('useCost').touched" >Campo requerido</div>
-<div class="form-control-feedback" *ngIf="getMainForm().get('useCost').errors?.maxlength && getMainForm().get('useCost').touched" >El campo debe contener menos de 9 caracteres</div>
+    <label class="col-2 col-form-label">extraHourCost</label>
+    <div class="col-8">
+        <input class="form-control"
+        type="text"
+        placeholder="extraHourCost"
+        formControlName="extraHourCost"
+        />
+        <div class="form-control-feedback" *ngIf="getMainForm().get('extraHourCost').errors?.required && getMainForm().get('extraHourCost').touched" >Campo requerido</div>
+        <div class="form-control-feedback" *ngIf="getMainForm().get('extraHourCost').errors?.maxlength && getMainForm().get('extraHourCost').touched" >El campo debe contener menos de 9 caracteres</div>
+    </div>
 </div>
+<div class="form-group row" >
+    <label class="col-2 col-form-label">useCost</label>
+    <div class="col-8">
+        <input class="form-control"
+        type="text"
+        placeholder="useCost"
+        formControlName="useCost"
+        />
+        <div class="form-control-feedback" *ngIf="getMainForm().get('useCost').errors?.required && getMainForm().get('useCost').touched" >Campo requerido</div>
+        <div class="form-control-feedback" *ngIf="getMainForm().get('useCost').errors?.maxlength && getMainForm().get('useCost').touched" >El campo debe contener menos de 9 caracteres</div>
+    </div>
 </div>
 <div class="form-group row">
-<label class="col-2 col-form-label">&nbsp;</label>
-<div class="input-group col-md-8">
-<button type="submit" class="btn btn-outline-primary" [disabled]="getMainForm().invalid" >
-Guardar
-</button>
-</div>
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+        <button type="submit" class="btn btn-outline-primary" [disabled]="getMainForm().invalid" >
+            Guardar
+        </button>
+    </div>
 </div>
 </form>
