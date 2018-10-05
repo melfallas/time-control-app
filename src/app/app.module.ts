@@ -23,6 +23,8 @@ import { ResourceComponent } from './components/resource/resource.component';
 import { ResourceFormComponent } from './components/resource/resource-form.component';
 import { TaskTypeComponent } from './components/task-type/task-type.component';
 import { TaskTypeFormComponent } from './components/task-type/task-type-form.component';
+import { CompanyComponent } from './components/company/company.component';
+import { CompanyFormComponent } from './components/company/company-form.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { TaskTypeFormComponent } from './components/task-type/task-type-form.com
         ResourceComponent,
         ResourceFormComponent,
         TaskTypeComponent,
-        TaskTypeFormComponent
+        TaskTypeFormComponent,
+        CompanyComponent,
+        CompanyFormComponent
     ],
     imports: [
         BrowserModule,
