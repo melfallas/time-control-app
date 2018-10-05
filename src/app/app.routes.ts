@@ -10,6 +10,8 @@ import { ResourceTypeComponent } from './components/resource-type/resource-type.
 import { ResourceTypeFormComponent } from './components/resource-type/resource-type-form.component';
 import { ResourceComponent } from './components/resource/resource.component';
 import { ResourceFormComponent } from './components/resource/resource-form.component';
+import { TaskTypeComponent } from './components/task-type/task-type.component';
+import { TaskTypeFormComponent } from './components/task-type/task-type-form.component';
 
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
@@ -27,6 +29,8 @@ const APP_ROUTES: Routes = [
 { path: 'resource-type/:id', component: ResourceTypeFormComponent },
 { path: 'resource', component: ResourceComponent },
 { path: 'resource/:id', component: ResourceFormComponent },
+{ path: 'task-type', component: TaskTypeComponent },
+{ path: 'task-type/:id', component: TaskTypeFormComponent },
 { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
