@@ -22,6 +22,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr *ngIf="getPageIsLoading()" >
+                        <td scope="row" colspan="5" class="table-row-center-column" >
+                            <img class="rounded-circle table-img-loading" src="../../assets/img/loading-2arrow-gray.gif" alt="Cargando...">
+                        </td>
+                    </tr>
+                    <tr *ngIf="!getPageIsLoading() && getTaskTypeList().length === 0" >
+                        <td scope="row" colspan="5" class="table-row-center-column" >
+                            No existen registros que mostrar
+                        </td>
+                    </tr>
                     <tr *ngFor="let item of getTaskTypeList(); let i = index;" >
                         <th scope="row">{{ i + 1 }}</th>
                         <td>{{ item.code }}</td>

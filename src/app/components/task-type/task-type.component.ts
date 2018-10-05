@@ -10,16 +10,22 @@ import { TaskTypeService } from "../../services/task-type.service";
 export class TaskTypeComponent {
 
     private taskTypeList : any[] = [];
+    private pageIsLoading : boolean = true;
 
     constructor(private _pTaskType : TaskTypeService) {
         this._pTaskType.getAll().subscribe(data => {
             this.taskTypeList = data;
             console.log(data);
+            this.pageIsLoading = false;
         });
     }
 
     public getTaskTypeList() {
         return this.taskTypeList;
+    }
+
+    public getPageIsLoading() {
+        return this.pageIsLoading;
     }
 
     public deleteTaskType(pId : string) {

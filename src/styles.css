@@ -3,8 +3,21 @@
   margin-bottom: 150px;
 }
 
+.table {
+    table-layout: fixed;
+}
+
 .form-control-invalid {
     color: red;
+}
+
+.table-row-center-column {
+    text-align: center;
+}
+
+.table-img-loading {
+    width: 30px;
+    height: 30px;
 }
 
 .puntero{
