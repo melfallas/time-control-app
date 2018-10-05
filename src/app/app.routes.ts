@@ -14,6 +14,8 @@ import { TaskTypeComponent } from './components/task-type/task-type.component';
 import { TaskTypeFormComponent } from './components/task-type/task-type-form.component';
 import { CompanyComponent } from './components/company/company.component';
 import { CompanyFormComponent } from './components/company/company-form.component';
+import { ProjectComponent } from './components/project/project.component';
+import { ProjectFormComponent } from './components/project/project-form.component';
 
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
@@ -35,6 +37,8 @@ const APP_ROUTES: Routes = [
 { path: 'task-type/:id', component: TaskTypeFormComponent },
 { path: 'company', component: CompanyComponent },
 { path: 'company/:id', component: CompanyFormComponent },
+{ path: 'project', component: ProjectComponent },
+{ path: 'project/:id', component: ProjectFormComponent },
 { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

@@ -25,6 +25,8 @@ import { TaskTypeComponent } from './components/task-type/task-type.component';
 import { TaskTypeFormComponent } from './components/task-type/task-type-form.component';
 import { CompanyComponent } from './components/company/company.component';
 import { CompanyFormComponent } from './components/company/company-form.component';
+import { ProjectComponent } from './components/project/project.component';
+import { ProjectFormComponent } from './components/project/project-form.component';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { CompanyFormComponent } from './components/company/company-form.componen
         TaskTypeComponent,
         TaskTypeFormComponent,
         CompanyComponent,
-        CompanyFormComponent
+        CompanyFormComponent,
+        ProjectComponent,
+        ProjectFormComponent
     ],
     imports: [
         BrowserModule,
