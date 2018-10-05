@@ -10,7 +10,7 @@ export class KnowledgeAreaService {
     private serviceUrl : string = "https://time-control-app.herokuapp.com/knowledgearea/";
 
     constructor(private _http : Http) { }
-
+    
     private getRootURL() {
         return `${ this.serviceUrl }`;
     }
@@ -37,7 +37,7 @@ export class KnowledgeAreaService {
         return this._http.post(this.getRootURL(), body, {headers})
         .map(result => result.json());
     }
-    
+
     public updateKnowledgeArea(pKnowledgeAreaData, pId : string) {
         let body = JSON.stringify(pKnowledgeAreaData);
         let headers = new Headers({

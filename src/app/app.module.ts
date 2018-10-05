@@ -24,29 +24,29 @@ import { ResourceFormComponent } from './components/resource/resource-form.compo
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    KnowledgeAreaComponent,
-    KnowledgeAreaFormComponent,
-    NavbarComponent,
-    HomeComponent,
-    ProjectPhaseComponent,
-    ProjectPhaseFormComponent,
-    ResourceTypeComponent,
-    ResourceTypeFormComponent,
-    ResourceComponent,
-    ResourceFormComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    FormsModule,
-    ReactiveFormsModule,
-    APP_ROUTING
-  ],
-  providers: [
-      KnowledgeAreaService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        KnowledgeAreaComponent,
+        KnowledgeAreaFormComponent,
+        NavbarComponent,
+        HomeComponent,
+        ProjectPhaseComponent,
+        ProjectPhaseFormComponent,
+        ResourceTypeComponent,
+        ResourceTypeFormComponent,
+        ResourceComponent,
+        ResourceFormComponent
+    ],
+    imports: [
+        BrowserModule,
+        HttpModule,
+        FormsModule,
+        ReactiveFormsModule,
+        APP_ROUTING
+    ],
+    providers: [
+        KnowledgeAreaService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

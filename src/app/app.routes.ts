@@ -12,22 +12,22 @@ import { ResourceComponent } from './components/resource/resource.component';
 import { ResourceFormComponent } from './components/resource/resource-form.component';
 
 const APP_ROUTES: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'knowledge-area', component: KnowledgeAreaComponent },
-  {
-      path: 'knowledge-area/:id',
-      component: KnowledgeAreaFormComponent/*,
-      children: [
+    { path: 'home', component: HomeComponent },
+    { path: 'knowledge-area', component: KnowledgeAreaComponent },
+    {
+        path: 'knowledge-area/:id',
+        component: KnowledgeAreaFormComponent/*,
+        children: [
 
-      ]*/
-  },
-  { path: 'project-phase', component: ProjectPhaseComponent },
-  { path: 'project-phase/:id', component: ProjectPhaseFormComponent },
-  { path: 'resource-type', component: ResourceTypeComponent },
-  { path: 'resource-type/:id', component: ResourceTypeFormComponent },
-  { path: 'resource', component: ResourceComponent },
-  { path: 'resource/:id', component: ResourceFormComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'home' }
+    ]*/
+},
+{ path: 'project-phase', component: ProjectPhaseComponent },
+{ path: 'project-phase/:id', component: ProjectPhaseFormComponent },
+{ path: 'resource-type', component: ResourceTypeComponent },
+{ path: 'resource-type/:id', component: ResourceTypeFormComponent },
+{ path: 'resource', component: ResourceComponent },
+{ path: 'resource/:id', component: ResourceFormComponent },
+{ path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);

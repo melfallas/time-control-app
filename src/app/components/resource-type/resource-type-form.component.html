@@ -1,55 +1,55 @@
 <div class="row">
-<div class="col-md-10">
-<h4>Nuevo Elemento <small>Resource-Type</small></h4>
-</div>
-<div class="col-md-2">
-<button [routerLink]="['/resource-type']" type="button" class="btn btn-outline-danger">Regresar</button>
-</div>
+    <div class="col-md-10">
+        <h4>Nuevo Elemento <small>Resource-Type</small></h4>
+    </div>
+    <div class="col-md-2">
+        <button [routerLink]="['/resource-type']" type="button" class="btn btn-outline-danger">Regresar</button>
+    </div>
 </div>
 <hr>
 <form [formGroup]="getMainForm()" (ngSubmit)="saveChanges()" >
 
-<div class="form-group row" >
-<label class="col-2 col-form-label">code</label>
-<div class="col-8">
-<input class="form-control"
-type="text"
-placeholder="code"
-formControlName="code"
-/>
-<div class="form-control-invalid" *ngIf="getMainForm().get('code').errors?.required && getMainForm().get('code').touched" >Campo requerido</div>
-<div class="form-control-invalid" *ngIf="getMainForm().get('code').errors?.maxlength && getMainForm().get('code').touched" >El campo debe contener menos de 5 caracteres</div>
-</div>
-</div>
-<div class="form-group row" >
-<label class="col-2 col-form-label">displayName</label>
-<div class="col-8">
-<input class="form-control"
-type="text"
-placeholder="displayName"
-formControlName="displayName"
-/>
-<div class="form-control-invalid" *ngIf="getMainForm().get('displayName').errors?.required && getMainForm().get('displayName').touched" >Campo requerido</div>
-<div class="form-control-invalid" *ngIf="getMainForm().get('displayName').errors?.maxlength && getMainForm().get('displayName').touched" >El campo debe contener menos de 50 caracteres</div>
-</div>
-</div>
-<div class="form-group row" >
-<label class="col-2 col-form-label">description</label>
-<div class="col-8">
-<input class="form-control"
-type="text"
-placeholder="description"
-formControlName="description"
-/>
-<div class="form-control-invalid" *ngIf="getMainForm().get('description').errors?.maxlength && getMainForm().get('description').touched" >El campo debe contener menos de 50 caracteres</div>
-</div>
-</div>
-<div class="form-group row">
-<label class="col-2 col-form-label">&nbsp;</label>
-<div class="input-group col-md-8">
-<button type="submit" class="btn btn-outline-primary" [disabled]="getMainForm().invalid" >
-Guardar
-</button>
-</div>
-</div>
+    <div class="form-group row" >
+        <label class="col-2 col-form-label">code</label>
+        <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="code"
+            formControlName="code"
+            />
+            <div class="form-control-invalid" *ngIf="getMainForm().get('code').errors?.required && getMainForm().get('code').touched" >Campo requerido</div>
+            <div class="form-control-invalid" *ngIf="getMainForm().get('code').errors?.maxlength && getMainForm().get('code').touched" >El campo debe contener menos de 5 caracteres</div>
+        </div>
+    </div>
+    <div class="form-group row" >
+        <label class="col-2 col-form-label">displayName</label>
+        <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="displayName"
+            formControlName="displayName"
+            />
+            <div class="form-control-invalid" *ngIf="getMainForm().get('displayName').errors?.required && getMainForm().get('displayName').touched" >Campo requerido</div>
+            <div class="form-control-invalid" *ngIf="getMainForm().get('displayName').errors?.maxlength && getMainForm().get('displayName').touched" >El campo debe contener menos de 50 caracteres</div>
+        </div>
+    </div>
+    <div class="form-group row" >
+        <label class="col-2 col-form-label">description</label>
+        <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="description"
+            formControlName="description"
+            />
+            <div class="form-control-invalid" *ngIf="getMainForm().get('description').errors?.maxlength && getMainForm().get('description').touched" >El campo debe contener menos de 50 caracteres</div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label">&nbsp;</label>
+        <div class="input-group col-md-8">
+            <button type="submit" class="btn btn-outline-primary" [disabled]="getMainForm().invalid" >
+                Guardar
+            </button>
+        </div>
+    </div>
 </form>

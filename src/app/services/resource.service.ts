@@ -10,7 +10,7 @@ export class ResourceService {
     private serviceUrl : string = "https://time-control-app.herokuapp.com/resource/";
 
     constructor(private _http : Http) { }
-
+    
     private getRootURL() {
         return `${ this.serviceUrl }`;
     }
