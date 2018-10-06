@@ -27,6 +27,8 @@ import { CompanyComponent } from './components/company/company.component';
 import { CompanyFormComponent } from './components/company/company-form.component';
 import { ProjectComponent } from './components/project/project.component';
 import { ProjectFormComponent } from './components/project/project-form.component';
+import { TaskControlComponent } from './components/task-control/task-control.component';
+import { TaskControlFormComponent } from './components/task-control/task-control-form.component';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import { ProjectFormComponent } from './components/project/project-form.componen
         CompanyComponent,
         CompanyFormComponent,
         ProjectComponent,
-        ProjectFormComponent
+        ProjectFormComponent,
+        TaskControlComponent,
+        TaskControlFormComponent
     ],
     imports: [
         BrowserModule,
