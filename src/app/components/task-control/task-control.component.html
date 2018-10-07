@@ -45,8 +45,8 @@
                         <td>{{ item.description }}</td>
                         <td>{{ item.project.displayName }}</td>
                         <td>{{ item.projectPhase.displayName }}</td>
-                        <td>{{ item.startTime }}</td>
-                        <td>{{ item.endDate }}</td>
+                        <td>{{ item.startTime | date:'yyyy-MM-dd HH:mm' }}</td>
+                        <td>{{ item.endDate | date:'yyyy-MM-dd HH:mm' }}</td>
                         <td>{{ item.isOutTime }}</td>
                         <td>{{ item.isPaid }}</td>
                         <td class="text-right" >
