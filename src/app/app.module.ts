@@ -4,9 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from "@angular/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Importación de Rutas
 import { APP_ROUTING } from './app.routes';
+
+// providers
+import { DatePipe } from '@angular/common';
 
 // Importación de Componentes
 import { AppComponent } from './app.component';
@@ -58,10 +62,12 @@ import { TaskControlFormComponent } from './components/task-control/task-control
         HttpModule,
         FormsModule,
         ReactiveFormsModule,
+        NgbModule,
         APP_ROUTING
     ],
     providers: [
-        KnowledgeAreaService
+        KnowledgeAreaService,
+        DatePipe
     ],
     bootstrap: [AppComponent]
 })

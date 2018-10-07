@@ -20,6 +20,24 @@
     height: 30px;
 }
 
+.date-control-row {
+    margin-top : 2rem !important;
+}
+
+
+ngb-datepicker {
+    text-align: center !important;
+}
+
+.ngb-tp{
+    margin-top: -1.5rem;
+}
+
+.ngb-tp-input-container > .btn.btn-link {
+    padding: 0;
+}
+
+
 .puntero{
   cursor: pointer;
 }
