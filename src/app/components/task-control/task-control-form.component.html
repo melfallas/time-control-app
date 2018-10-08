@@ -84,6 +84,37 @@
         <div class="form-control-invalid" *ngIf="getMainForm().get('startTime').errors?.maxlength && getMainForm().get('startTime').touched" >El campo debe contener menos de 8 caracteres</div>
     </div>
 </div>
+
+<div class="form-group row date-control-row" >
+    <label class="col-2 col-form-label">startTime</label>
+    <div class="col-8 col-sm-4">
+        <div class="form-group">
+            <div class="input-group">
+                <input class="form-control" placeholder="YYYY-MM-DD"
+                formControlName="startTimeDP" name="startTimeDP"
+                ngbDatepicker [footerTemplate]="footerTemplate"
+                #startTimeDP="ngbDatepicker"
+                [(ngModel)]="startTimeDPModel"
+                >
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary calendar" (click)="startTimeDP.toggle()" type="button"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #footerTemplate>
+        <hr class="my-0">
+        <button class="btn btn-primary btn-sm m-2 w-50" (click)="setDateToday(startTimeDP, 'startTimeDP')">Today</button>
+    </ng-template>
+    <!-- <pre>Model: {{ getStartTimeDPModel() | json }}</pre> -->
+    <div class="col-2 d-sm-none"></div>
+    <label class="col-3 d-sm-none col-form-label">startTime</label>
+    <div class="col-8 col-sm-4">
+        <ngb-timepicker formControlName="startTimeTP" [(ngModel)]="startTimeTPModel" ></ngb-timepicker>
+    </div>
+    <!-- <pre>Selected time: {{getStartTimeTPModel() | json}}</pre> -->
+</div>
+
 <div class="form-group row" >
     <label class="col-2 col-form-label">endDate</label>
     <div class="col-8">
