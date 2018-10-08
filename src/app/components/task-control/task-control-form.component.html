@@ -8,155 +8,147 @@
 </div>
 <hr>
 <form [formGroup]="getMainForm()" (ngSubmit)="saveChanges()" >
-    <div class="form-group row" >
+
+    <div class="form-group row " >
         <label class="col-2 col-form-label">taskType</label>
         <div class="col-8">
-            <select class="form-control"
-            name="taskType"
-            placeholder="taskType"
-            formControlName="taskType"
-            >
-            <option *ngFor="let item of getTaskTypeList()" [value]="item.id">{{ item.displayName }}</option>
-        </select>
+            <select class="form-control" name="taskType" placeholder="taskType" formControlName="taskType">
+                <option *ngFor="let item of getTaskTypeList()" [value]="item.id">{{ item.displayName }}</option>
+            </select>
+        </div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('taskType').errors?.required && getMainForm().get('taskType').touched" >Campo requerido</div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('taskType').errors?.maxlength && getMainForm().get('taskType').touched" >El campo debe contener menos de 4 caracteres</div>
     </div>
-</div>
-<div class="form-group row" >
-    <label class="col-2 col-form-label">displayName</label>
-    <div class="col-8">
-        <input class="form-control"
-        type="text"
-        placeholder="displayName"
-        formControlName="displayName"
-        />
+    <div class="form-group row " >
+        <label class="col-2 col-form-label">displayName</label>
+        <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="displayName"
+            formControlName="displayName"
+            />
+        </div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('displayName').errors?.maxlength && getMainForm().get('displayName').touched" >El campo debe contener menos de 50 caracteres</div>
     </div>
-</div>
-<div class="form-group row" >
-    <label class="col-2 col-form-label">description</label>
-    <div class="col-8">
-        <input class="form-control"
-        type="text"
-        placeholder="description"
-        formControlName="description"
-        />
+    <div class="form-group row " >
+        <label class="col-2 col-form-label">description</label>
+        <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="description"
+            formControlName="description"
+            />
+        </div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('description').errors?.maxlength && getMainForm().get('description').touched" >El campo debe contener menos de 50 caracteres</div>
     </div>
-</div>
-<div class="form-group row" >
-    <label class="col-2 col-form-label">project</label>
-    <div class="col-8">
-        <select class="form-control"
-        name="project"
-        placeholder="project"
-        formControlName="project"
-        >
-        <option *ngFor="let item of getProjectList()" [value]="item.id">{{ item.displayName }}</option>
-    </select>
-    <div class="form-control-invalid" *ngIf="getMainForm().get('project').errors?.required && getMainForm().get('project').touched" >Campo requerido</div>
-    <div class="form-control-invalid" *ngIf="getMainForm().get('project').errors?.maxlength && getMainForm().get('project').touched" >El campo debe contener menos de 4 caracteres</div>
-</div>
-</div>
-<div class="form-group row" >
-    <label class="col-2 col-form-label">projectPhase</label>
-    <div class="col-8">
-        <select class="form-control"
-        name="projectPhase"
-        placeholder="projectPhase"
-        formControlName="projectPhase"
-        >
-        <option *ngFor="let item of getProjectPhaseList()" [value]="item.id">{{ item.displayName }}</option>
-    </select>
-    <div class="form-control-invalid" *ngIf="getMainForm().get('projectPhase').errors?.required && getMainForm().get('projectPhase').touched" >Campo requerido</div>
-    <div class="form-control-invalid" *ngIf="getMainForm().get('projectPhase').errors?.maxlength && getMainForm().get('projectPhase').touched" >El campo debe contener menos de 4 caracteres</div>
-</div>
-</div>
-<div class="form-group row" >
-    <label class="col-2 col-form-label">startTime</label>
-    <div class="col-8">
-        <input class="form-control"
-        type="text"
-        placeholder="startTime"
-        formControlName="startTime"
-        />
-        <div class="form-control-invalid" *ngIf="getMainForm().get('startTime').errors?.required && getMainForm().get('startTime').touched" >Campo requerido</div>
-        <div class="form-control-invalid" *ngIf="getMainForm().get('startTime').errors?.maxlength && getMainForm().get('startTime').touched" >El campo debe contener menos de 8 caracteres</div>
+    <div class="form-group row " >
+        <label class="col-2 col-form-label">project</label>
+        <div class="col-8">
+            <select class="form-control" name="project" placeholder="project" formControlName="project">
+                <option *ngFor="let item of getProjectList()" [value]="item.id">{{ item.displayName }}</option>
+            </select>
+        </div>
+        <div class="form-control-invalid" *ngIf="getMainForm().get('project').errors?.required && getMainForm().get('project').touched" >Campo requerido</div>
+        <div class="form-control-invalid" *ngIf="getMainForm().get('project').errors?.maxlength && getMainForm().get('project').touched" >El campo debe contener menos de 4 caracteres</div>
     </div>
-</div>
-
-<div class="form-group row date-control-row" >
-    <label class="col-2 col-form-label">startTime</label>
-    <div class="col-8 col-sm-4">
-        <div class="form-group">
-            <div class="input-group">
-                <input class="form-control" placeholder="YYYY-MM-DD"
-                formControlName="startTimeDP" name="startTimeDP"
-                ngbDatepicker [footerTemplate]="footerTemplate"
-                #startTimeDP="ngbDatepicker"
-                [(ngModel)]="startTimeDPModel"
-                >
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary calendar" (click)="startTimeDP.toggle()" type="button"></button>
+    <div class="form-group row " >
+        <label class="col-2 col-form-label">projectPhase</label>
+        <div class="col-8">
+            <select class="form-control" name="projectPhase" placeholder="projectPhase" formControlName="projectPhase">
+                <option *ngFor="let item of getProjectPhaseList()" [value]="item.id">{{ item.displayName }}</option>
+            </select>
+        </div>
+        <div class="form-control-invalid" *ngIf="getMainForm().get('projectPhase').errors?.required && getMainForm().get('projectPhase').touched" >Campo requerido</div>
+        <div class="form-control-invalid" *ngIf="getMainForm().get('projectPhase').errors?.maxlength && getMainForm().get('projectPhase').touched" >El campo debe contener menos de 4 caracteres</div>
+    </div>
+    <div class="form-group row date-control-row" >
+        <label class="col-2 col-form-label">startTime</label>
+        <div class="col-8 col-sm-4">
+            <div class="form-group">
+                <div class="input-group">
+                    <input class="form-control" placeholder="YYYY-MM-DD"
+                    formControlName="startTimeDP" name="startTimeDP"
+                    ngbDatepicker [footerTemplate]="footerTemplate"
+                    #startTimeDP="ngbDatepicker"
+                    [(ngModel)]="startTimeDPModel"
+                    />
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary calendar" (click)="startTimeDP.toggle()" type="button"></button>
+                    </div>
                 </div>
             </div>
         </div>
+        <ng-template #footerTemplate>
+            <hr class="my-0">
+            <button class="btn btn-primary btn-sm m-2 w-50" (click)="setDateToday(startTimeDP, 'startTimeDPstartTimeDP')">Today</button>
+        </ng-template>
+        <div class="col-2 d-sm-none"></div>
+        <label class="col-3 d-sm-none col-form-label">startTime</label>
+        <div class="col-8 col-sm-4">
+            <ngb-timepicker formControlName="startTimeTP" [(ngModel)]="startTimeTPModel" ></ngb-timepicker>
+        </div>
+        <div class="form-control-invalid" *ngIf="getMainForm().get('startTimeDP').errors?.required && getMainForm().get('startTimeDP').touched" >Campo requerido</div>
+        <div class="form-control-invalid" *ngIf="getMainForm().get('startTimeDP').errors?.maxlength && getMainForm().get('startTimeDP').touched" >El campo debe contener menos de 8 caracteres</div>
     </div>
-    <ng-template #footerTemplate>
-        <hr class="my-0">
-        <button class="btn btn-primary btn-sm m-2 w-50" (click)="setDateToday(startTimeDP, 'startTimeDP')">Today</button>
-    </ng-template>
-    <!-- <pre>Model: {{ getStartTimeDPModel() | json }}</pre> -->
-    <div class="col-2 d-sm-none"></div>
-    <label class="col-3 d-sm-none col-form-label">startTime</label>
-    <div class="col-8 col-sm-4">
-        <ngb-timepicker formControlName="startTimeTP" [(ngModel)]="startTimeTPModel" ></ngb-timepicker>
+    <div class="form-group row date-control-row" >
+        <label class="col-2 col-form-label">endDate</label>
+        <div class="col-8 col-sm-4">
+            <div class="form-group">
+                <div class="input-group">
+                    <input class="form-control" placeholder="YYYY-MM-DD"
+                    formControlName="endDateDP" name="endDateDP"
+                    ngbDatepicker [footerTemplate]="footerTemplate"
+                    #endDateDP="ngbDatepicker"
+                    [(ngModel)]="endDateDPModel"
+                    />
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary calendar" (click)="endDateDP.toggle()" type="button"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-template #footerTemplate>
+            <hr class="my-0">
+            <button class="btn btn-primary btn-sm m-2 w-50" (click)="setDateToday(endDateDP, 'endDateDPstartTimeDP')">Today</button>
+        </ng-template>
+        <div class="col-2 d-sm-none"></div>
+        <label class="col-3 d-sm-none col-form-label">endDate</label>
+        <div class="col-8 col-sm-4">
+            <ngb-timepicker formControlName="endDateTP" [(ngModel)]="endDateTPModel" ></ngb-timepicker>
+        </div>
+        <div class="form-control-invalid" *ngIf="getMainForm().get('endDateDP').errors?.required && getMainForm().get('endDateDP').touched" >Campo requerido</div>
+        <div class="form-control-invalid" *ngIf="getMainForm().get('endDateDP').errors?.maxlength && getMainForm().get('endDateDP').touched" >El campo debe contener menos de 8 caracteres</div>
     </div>
-    <!-- <pre>Selected time: {{getStartTimeTPModel() | json}}</pre> -->
-</div>
-
-<div class="form-group row" >
-    <label class="col-2 col-form-label">endDate</label>
-    <div class="col-8">
-        <input class="form-control"
-        type="text"
-        placeholder="endDate"
-        formControlName="endDate"
-        />
-        <div class="form-control-invalid" *ngIf="getMainForm().get('endDate').errors?.required && getMainForm().get('endDate').touched" >Campo requerido</div>
-        <div class="form-control-invalid" *ngIf="getMainForm().get('endDate').errors?.maxlength && getMainForm().get('endDate').touched" >El campo debe contener menos de 8 caracteres</div>
-    </div>
-</div>
-<div class="form-group row" >
-    <label class="col-2 col-form-label">isOutTime</label>
-    <div class="col-8">
-        <input class="form-control"
-        type="text"
-        placeholder="isOutTime"
-        formControlName="isOutTime"
-        />
+    <div class="form-group row " >
+        <label class="col-2 col-form-label">isOutTime</label>
+        <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="isOutTime"
+            formControlName="isOutTime"
+            />
+        </div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('isOutTime').errors?.required && getMainForm().get('isOutTime').touched" >Campo requerido</div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('isOutTime').errors?.maxlength && getMainForm().get('isOutTime').touched" >El campo debe contener menos de 1 caracteres</div>
     </div>
-</div>
-<div class="form-group row" >
-    <label class="col-2 col-form-label">isPaid</label>
-    <div class="col-8">
-        <input class="form-control"
-        type="text"
-        placeholder="isPaid"
-        formControlName="isPaid"
-        />
+    <div class="form-group row " >
+        <label class="col-2 col-form-label">isPaid</label>
+        <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="isPaid"
+            formControlName="isPaid"
+            />
+        </div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('isPaid').errors?.required && getMainForm().get('isPaid').touched" >Campo requerido</div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('isPaid').errors?.maxlength && getMainForm().get('isPaid').touched" >El campo debe contener menos de 1 caracteres</div>
     </div>
-</div>
-<div class="form-group row">
-    <label class="col-2 col-form-label">&nbsp;</label>
-    <div class="input-group col-md-8">
-        <button type="submit" class="btn btn-outline-primary" [disabled]="getMainForm().invalid" >
-            Guardar
-        </button>
+    <div class="form-group row">
+        <label class="col-2 col-form-label">&nbsp;</label>
+        <div class="input-group col-md-8">
+            <button type="submit" class="btn btn-outline-primary" [disabled]="getMainForm().invalid" >
+                Guardar
+            </button>
+        </div>
     </div>
-</div>
 </form>
