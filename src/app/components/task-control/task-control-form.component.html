@@ -121,24 +121,30 @@
     </div>
     <div class="form-group row " >
         <label class="col-2 col-form-label">isOutTime</label>
-        <div class="col-8">
-            <input class="form-control"
-            type="text"
-            placeholder="isOutTime"
-            formControlName="isOutTime"
-            />
+        <div class="offset-1 col-2">
+            <label class="form-check-label">
+                <input type="radio" value="true" name="isOutTime" formControlName="isOutTime" >Yes
+            </label>
+        </div>
+        <div class="col-5">
+            <label class="form-check-label">
+                <input type="radio" value="false" name="isOutTime" formControlName="isOutTime" >No
+            </label>
         </div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('isOutTime').errors?.required && getMainForm().get('isOutTime').touched" >Campo requerido</div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('isOutTime').errors?.maxlength && getMainForm().get('isOutTime').touched" >El campo debe contener menos de 1 caracteres</div>
     </div>
     <div class="form-group row " >
         <label class="col-2 col-form-label">isPaid</label>
-        <div class="col-8">
-            <input class="form-control"
-            type="text"
-            placeholder="isPaid"
-            formControlName="isPaid"
-            />
+        <div class="offset-1 col-2">
+            <label class="form-check-label">
+                <input type="radio" value="true" name="isPaid" formControlName="isPaid" >Yes
+            </label>
+        </div>
+        <div class="col-5">
+            <label class="form-check-label">
+                <input type="radio" value="false" name="isPaid" formControlName="isPaid" >No
+            </label>
         </div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('isPaid').errors?.required && getMainForm().get('isPaid').touched" >Campo requerido</div>
         <div class="form-control-invalid" *ngIf="getMainForm().get('isPaid').errors?.maxlength && getMainForm().get('isPaid').touched" >El campo debe contener menos de 1 caracteres</div>

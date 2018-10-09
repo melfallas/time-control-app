@@ -66,6 +66,8 @@ export class TaskControlFormComponent {
                 timeStruct = this._dtuService.getTimeStruct(item.data.endDate);
                 item.data.endDateTP = timeStruct;
                 this.endDateTPModel = timeStruct;
+                item.data.isOutTime = item.data.isOutTime ? 'true' : 'false';
+                item.data.isPaid = item.data.isPaid ? 'true' : 'false';
 
                 // Reemplazar objetos complejos por el id, en caso de existir
                 item.data.taskType = item.data.taskType.id;
@@ -107,10 +109,10 @@ export class TaskControlFormComponent {
         'endDateTP' : new FormControl(this.endDateTPModel, [
             Validators.required
         ]),
-        'isOutTime' : new FormControl('', [
+        'isOutTime' : new FormControl('false', [
             Validators.required
         ]),
-        'isPaid' : new FormControl('', [
+        'isPaid' : new FormControl('false', [
             Validators.required
         ]),
     });
